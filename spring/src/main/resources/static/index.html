@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de productos</title>
+    
+   
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+  
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+            <div>
+                <h1>Registro de productos</h1>
+                <p>Gestión simple de existencias y precios del catálogo.</p>
+            </div>
+            <button id="myBtn" class="btn-crear">
+                <i class="fa-solid fa-circle-plus"></i> Crear Producto
+            </button>
+        </div>
+
+        <!-- Tabla -->
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>NOMBRE</th>
+                    <th>PRECIO</th>
+                    <th>CANTIDAD</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody id="tablaProductos">
+                <!-- Aquí el JS inserta los productos -->
+            </tbody>
+        </table>
+
+        <!-- Footer de la tabla -->
+        <div class="footer-tabla">
+            <span id="totalProductos">Total: 0 productos registrados</span>
+            <span>Página 1 de 1</span>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="tituloModal">Crear Producto</h2>
+            
+            <div class="form-group">
+                <label for="nombre">Nombre del producto</label>
+                <input type="text" id="nombre" placeholder="Ej. Camisa Oversize">
+            </div>
+            
+            <div class="form-group">
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" placeholder="Ej. 2500">
+            </div>
+            
+            <div class="form-group">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" placeholder="Ej. 10">
+            </div>
+            
+            <button id="btnGuardar" class="btn-guardar">Guardar Producto</button>
+        </div>
+    </div>
+
+    <!-- Tu script de JS -->
+    <script src="index.js"></script>
+</body>
+</html>
